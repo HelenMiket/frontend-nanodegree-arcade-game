@@ -122,9 +122,9 @@ const Engine = (function (global) {
 
     function checkCollisions() {
         for (enemy of allEnemies) {
-            if (Math.floor((enemy.y + 20) / 83) === player.row && 
-                enemy.x > (player.column * 101 - 81) && 
-                enemy.x < player.column * 101 + 79) {
+            if (Math.floor((enemy.y + 20) / TILE_HEIGHT) === player.row && 
+                enemy.x > (player.column * TILE_WIDTH - 81) && 
+                enemy.x < player.column * TILE_WIDTH + 79) {
                 // Collided. Reset the game
                 reset();
             }
@@ -185,7 +185,7 @@ const Engine = (function (global) {
                  * so that we get the benefits of caching these images, since
                  * we're using them over and over.
                  */
-                ctx.drawImage(Resources.get(rowImages[row]), col * 101, row * 83);
+                ctx.drawImage(Resources.get(rowImages[row]), col * TILE_WIDTH, row * TILE_HEIGHT);
             }
         }
 

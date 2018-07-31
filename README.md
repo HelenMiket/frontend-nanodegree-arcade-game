@@ -12,4 +12,6 @@ This project builds a complete browser-based arcade game. The are Enemies (Bugs)
 
 ## Instructions
 
+To start running the application, open index.html in a browser.
+
 To start playing the game, click the Start button. The time elapsed will be shown.
